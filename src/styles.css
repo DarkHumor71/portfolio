@@ -903,6 +903,9 @@ button:hover .arrow {
   margin-top: 22px;
   font-size: 10px;
 }
+.card-meta a:hover {
+  color: #d45d3a;
+}
 .card-title-row {
   display: flex;
   align-items: center;
@@ -2191,5 +2194,201 @@ button:hover .arrow {
 @media (max-width: 480px) {
   .mobile-break {
     display: block;
+  }
+}
+
+.visual-freertos {
+  background: #383342;
+}
+.visual-freertos .visual-grid {
+  background-image: linear-gradient(#ffffff10 1px, transparent 1px),
+    linear-gradient(90deg, #ffffff10 1px, transparent 1px);
+}
+.rtos-diagram {
+  position: absolute;
+  width: 82%;
+  max-width: 950px;
+  left: 50%;
+  top: 22%;
+  transform: translateX(-50%);
+  color: #f6f1e8;
+}
+.rtos-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 1px solid #e3e0d04a;
+  padding-bottom: 12px;
+}
+.rtos-heading span,
+.rtos-loop {
+  font-family: "DM Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  color: #d7ee83;
+}
+.rtos-heading strong {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 22px;
+  letter-spacing: -0.05em;
+}
+.rtos-stages {
+  display: flex;
+  gap: 15px;
+  margin-top: 29px;
+}
+.rtos-stage {
+  flex: 1;
+  min-width: 0;
+  height: 90px;
+  background: #ece9dd;
+  border: 3px solid #ed8063;
+  padding: 9px;
+  color: #35333c;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+.rtos-stage:not(:last-child)::after {
+  content: "→";
+  position: absolute;
+  color: #d7ee83;
+  right: -16px;
+  top: 31px;
+  z-index: 2;
+  font-size: 16px;
+}
+.rtos-stage small {
+  font-family: "DM Mono", monospace;
+  font-size: 9px;
+  color: #a66051;
+}
+.rtos-stage b {
+  font-family: "DM Mono", monospace;
+  font-size: 10px;
+  letter-spacing: -0.04em;
+}
+.rtos-stage i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #ed8063;
+}
+.rtos-loop {
+  border: 1px dashed #d7ee8370;
+  border-top: 0;
+  width: 64%;
+  margin: 0 auto;
+  padding: 12px 0 8px;
+  text-align: center;
+}
+.visual-automation {
+  background: #263f52;
+}
+.visual-automation .visual-grid {
+  background-image: linear-gradient(#ffffff0e 1px, transparent 1px),
+    linear-gradient(90deg, #ffffff0e 1px, transparent 1px);
+}
+.automation-flow {
+  position: absolute;
+  width: 84%;
+  max-width: 950px;
+  left: 50%;
+  top: 25%;
+  transform: translateX(-50%);
+  display: grid;
+  grid-template-columns: 1fr 24px 1fr 24px 1fr;
+  align-items: center;
+  gap: 10px;
+}
+.automation-node {
+  min-width: 0;
+  height: 145px;
+  padding: 16px;
+  background: #e6e9dd;
+  border-top: 5px solid #d9f16d;
+  box-shadow: 8px 9px 0 #1028387a;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #273846;
+}
+.automation-node:nth-of-type(3) {
+  border-top-color: #f48a65;
+}
+.automation-node small,
+.automation-node span,
+.automation-status {
+  font-family: "DM Mono", monospace;
+  font-size: 9px;
+  letter-spacing: 0.03em;
+}
+.automation-node strong {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+.automation-node span {
+  border-top: 1px solid #aebdb7;
+  padding-top: 7px;
+}
+.automation-arrow {
+  color: #d9f16d;
+  font-size: 23px;
+  text-align: center;
+}
+.automation-status {
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  bottom: 12%;
+  padding-top: 10px;
+  border-top: 1px solid #aec5c055;
+  color: #d9f16d;
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 760px) {
+  .rtos-stages {
+    gap: 8px;
+  }
+  .rtos-stage {
+    height: 76px;
+    padding: 6px;
+    border-width: 2px;
+  }
+  .rtos-stage:not(:last-child)::after {
+    right: -9px;
+    top: 28px;
+    font-size: 12px;
+  }
+  .rtos-stage b {
+    font-size: 8px;
+  }
+  .rtos-loop {
+    width: 74%;
+  }
+  .automation-flow {
+    gap: 5px;
+    grid-template-columns: 1fr 11px 1fr 11px 1fr;
+  }
+  .automation-node {
+    height: 112px;
+    padding: 7px;
+  }
+  .automation-node strong {
+    font-size: 13px;
+  }
+  .automation-node small,
+  .automation-node span {
+    font-size: 7px;
+  }
+  .automation-arrow {
+    font-size: 15px;
+  }
+  .automation-status {
+    font-size: 7px;
   }
 }

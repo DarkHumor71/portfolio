@@ -150,7 +150,7 @@ function ProjectVisual({
       )}
       {kind === "nas" && (
         <>
-          <div className="visual-label top-left">FIG 02 / NETWORK STORAGE</div>
+          <div className="visual-label top-left">FIG 03 / NETWORK STORAGE</div>
           <div className="nas-orbit orbit-one" />
           <div className="nas-orbit orbit-two" />
           <div className="nas-board">
@@ -172,9 +172,37 @@ function ProjectVisual({
           <div className="visual-label bottom-right">CONNECTED SYSTEMS</div>
         </>
       )}
+      {kind === "freertos" && (
+        <>
+          <div className="visual-label top-left">FIG 02 / PROCESS CONTROL</div>
+          <div className="rtos-diagram">
+            <div className="rtos-heading">
+              <span>● LIVE SIMULATION</span>
+              <strong>FreeRTOS</strong>
+            </div>
+            <div className="rtos-stages">
+              {["RAW", "PROCESS", "ASSEMBLE", "QC", "PACK"].map(
+                (stage, index) => (
+                  <div className="rtos-stage" key={stage}>
+                    <small>0{index + 1}</small>
+                    <b>{stage}</b>
+                    <i />
+                  </div>
+                )
+              )}
+            </div>
+            <div className="rtos-loop">↶ &nbsp; FAILED QC / REWORK LOOP</div>
+          </div>
+          <div className="visual-label bottom-right">
+            TASKS / TOKENS / TRANSITIONS
+          </div>
+        </>
+      )}
       {kind === "elesystem" && (
         <>
-          <div className="visual-label top-left">FIG 03 / WEB APPLICATION</div>
+          <div className="visual-label top-left">
+            FIG 04 / CONNECTED PLATFORM
+          </div>
           <div className="dashboard">
             <div className="dashboard-top">
               <span>● ● ●</span>
@@ -212,10 +240,53 @@ function ProjectVisual({
           </div>
         </>
       )}
+      {kind === "automation" && (
+        <>
+          <div className="visual-label top-left">FIG 05 / CATALOG PIPELINE</div>
+          <div className="automation-flow">
+            <div className="automation-node">
+              <small>01 / SOURCE</small>
+              <strong>
+                GOOGLE
+                <br />
+                DRIVE
+              </strong>
+              <span>CATALOG.CSV</span>
+            </div>
+            <div className="automation-arrow">→</div>
+            <div className="automation-node">
+              <small>02 / ENRICH</small>
+              <strong>
+                PYTHON
+                <br />
+                JOBS
+              </strong>
+              <span>LINKS + DELTAS</span>
+            </div>
+            <div className="automation-arrow">→</div>
+            <div className="automation-node">
+              <small>03 / SYNC</small>
+              <strong>
+                MERCHANT
+                <br />
+                API
+              </strong>
+              <span>PRODUCT FEED</span>
+            </div>
+          </div>
+          <div className="automation-status">
+            <span>● ACTIONS / READY</span>
+            <span>DRY RUN · CACHE · LOGS</span>
+          </div>
+          <div className="visual-label bottom-right">
+            DATA IN / PRODUCTS OUT
+          </div>
+        </>
+      )}
       {kind === "hachette" && (
         <>
           <div className="visual-label top-left">
-            FIG 04 / PUBLISHING PLATFORM
+            FIG 06 / PUBLISHING PLATFORM
           </div>
           <div className="publication">
             <div className="publication-head">
@@ -283,7 +354,13 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
         <span>
           {project.number} / {project.eyebrow}
         </span>
-        <span>CASE STUDY</span>
+        {project.github ? (
+          <a href={project.github} target="_blank" rel="noreferrer">
+            SOURCE ↗
+          </a>
+        ) : (
+          <span>CASE STUDY</span>
+        )}
       </div>
       <div className="card-title-row">
         <h3>
@@ -528,7 +605,9 @@ function ProjectsPage() {
   return (
     <main className="page-main container">
       <div className="page-intro">
-        <span className="eyebrow">INDEX / 001—004</span>
+        <span className="eyebrow">
+          INDEX / 001—{String(projects.length).padStart(3, "0")}
+        </span>
         <h1>
           Selected <em>work.</em>
         </h1>
@@ -819,7 +898,7 @@ function ExperiencePage() {
         <div className="experience-timeline">
           <article>
             <div className="timeline-top">
-              <span>2025 — PRESENT</span>
+              <span>2025 — 2026</span>
               <span className="timeline-dot" />
             </div>
             <h3>Software Engineer</h3>
@@ -831,11 +910,11 @@ function ExperiencePage() {
               <span>PROJECT PRACTICE</span>
               <span className="timeline-dot" />
             </div>
-            <h3>Independent engineering work</h3>
+            <h3>Engineering projects</h3>
             <p className="company">Embedded / Systems / Web</p>
             <p>
-              Hands-on work across an ESP32 elevator controller, PYNQ-Z2 network
-              storage, and web platforms.
+              Work across ESP32 control, FreeRTOS simulation, PYNQ-Z2 network
+              storage, full-stack applications, and catalog automation.
             </p>
             <a className="text-link" href={siteUrl("/projects")}>
               Explore projects <Arrow diagonal />
@@ -903,7 +982,7 @@ function ResumePage() {
         <div className="resume-section">
           <h3>Experience</h3>
           <div className="resume-entry">
-            <span>2025 — PRESENT</span>
+            <span>2025 — 2026</span>
             <div>
               <strong>Software Engineer · ITXI</strong>
             </div>
@@ -911,7 +990,7 @@ function ResumePage() {
         </div>
         <div className="resume-section">
           <h3>Selected projects</h3>
-          {projects.slice(0, 3).map((p) => (
+          {projects.slice(0, 5).map((p) => (
             <div className="resume-entry" key={p.slug}>
               <span>{p.category.toUpperCase()}</span>
               <div>
