@@ -1,4 +1,4 @@
-export type Category = "Embedded" | "Systems" | "Web" | "Electronics";
+export type Category = "Embedded" | "Systems" | "Software" | "Electronics";
 
 export type Project = {
   slug: string;
@@ -14,7 +14,7 @@ export type Project = {
   architecture: string[];
   notes: { title: string; body: string }[];
   outcome: string;
-  visual: "elevator" | "freertos" | "nas" | "elesystem" | "automation";
+  visual: "elevator" | "freertos" | "nas" | "elesystem" | "automation" | "mic";
   featured: boolean;
   image?: string;
   imageAlt?: string;
@@ -173,7 +173,7 @@ export const projects: Project[] = [
     number: "04",
     title: "EleSystemv2",
     shortTitle: "EleSystemv2",
-    category: "Web",
+    category: "Software",
     eyebrow: "IOT / FULL-STACK PLATFORM",
     summary:
       "An IoT building platform connecting an ESP32 elevator, QR-based access, electricity tracking, and a React management dashboard.",
@@ -262,6 +262,53 @@ export const projects: Project[] = [
     featured: true,
     github: "https://github.com/DarkHumor71/GMC-automation",
   },
+  {
+    slug: "mic-cleaner",
+    number: "06",
+    title: "MicCleaner",
+    shortTitle: "MicCleaner",
+    category: "Software",
+    eyebrow: "REAL-TIME AUDIO / DESKTOP",
+    summary:
+      "A Windows audio app that routes microphone input through configurable harmonic notch filters with live signal diagnostics.",
+    overview:
+      "MicCleaner processes audio from one device and sends the filtered stream to another. It targets stationary hum and harmonics with adjustable narrow notch filters, and provides a desktop interface with live charts and notification-area controls.",
+    role: "Real-time audio processing, device routing, desktop controls, and diagnostics.",
+    technologies: [
+      "Python",
+      "NumPy",
+      "SciPy",
+      "sounddevice",
+      "Tkinter",
+      "Matplotlib",
+      "PyInstaller",
+    ],
+    architecture: [
+      "Audio input device",
+      "IIR notch filter bank",
+      "Gain + channel routing",
+      "Output device + live monitor",
+    ],
+    notes: [
+      {
+        title: "Targeted harmonic filtering",
+        body: "The default filter uses narrow notches at 50 Hz harmonics through 6 kHz. The base frequency, upper limit, notch width, and explicit frequencies can be adjusted.",
+      },
+      {
+        title: "Practical device routing",
+        body: "Input and output devices can be selected by name and host API, making the setup less dependent on Windows device-number changes. A virtual cable can route the processed stream into voice apps.",
+      },
+      {
+        title: "Visible audio behavior",
+        body: "The desktop app shows waveforms, spectra, spectrograms, levels, clipping, and stream-status events. A bypass control supports direct comparison.",
+      },
+    ],
+    outcome:
+      "A Windows desktop and command-line audio tool with configurable filtering, saved settings, and a packaged executable release.",
+    visual: "mic",
+    featured: true,
+    github: "https://github.com/DarkHumor71/Mic-cleaner",
+  },
 ];
 
 export const skills = [
@@ -283,7 +330,15 @@ export const skills = [
   },
   {
     name: "Software",
-    items: ["React", "TypeScript", "Node.js", "Python", "PHP", "WordPress"],
+    items: [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "Python",
+      "NumPy / SciPy",
+      "PHP",
+      "WordPress",
+    ],
   },
   {
     name: "Systems",

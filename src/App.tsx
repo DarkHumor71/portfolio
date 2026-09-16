@@ -283,6 +283,46 @@ function ProjectVisual({
           </div>
         </>
       )}
+      {kind === "mic" && (
+        <>
+          <div className="visual-label top-left">
+            FIG 06 / AUDIO SIGNAL PATH
+          </div>
+          <div className="mic-console">
+            <div className="mic-console-head">
+              <span>MICCLEANER / DSP</span>
+              <span>● STREAM ACTIVE</span>
+            </div>
+            <div className="mic-signal">
+              <span>01 / INPUT</span>
+              <svg
+                viewBox="0 0 600 100"
+                preserveAspectRatio="none"
+                aria-hidden="true"
+              >
+                <path d="M0 50 L15 35 L28 62 L42 20 L57 82 L72 38 L85 64 L100 16 L114 78 L130 33 L145 61 L160 22 L176 76 L192 41 L207 58 L223 18 L238 83 L253 38 L269 63 L283 27 L298 74 L313 40 L328 60 L343 19 L358 80 L373 35 L388 66 L403 23 L418 75 L433 42 L448 61 L463 18 L478 82 L493 38 L508 65 L523 26 L538 74 L553 43 L568 59 L583 21 L600 50" />
+              </svg>
+            </div>
+            <div className="mic-signal mic-signal-clean">
+              <span>02 / FILTERED</span>
+              <svg
+                viewBox="0 0 600 100"
+                preserveAspectRatio="none"
+                aria-hidden="true"
+              >
+                <path d="M0 50 C20 20 40 20 60 50 S100 80 120 50 S160 20 180 50 S220 80 240 50 S280 20 300 50 S340 80 360 50 S400 20 420 50 S460 80 480 50 S520 20 540 50 S580 80 600 50" />
+              </svg>
+            </div>
+            <div className="mic-console-foot">
+              <span>50 HZ → 6 KHZ / NOTCH BANK</span>
+              <span>48 KHZ / LIVE</span>
+            </div>
+          </div>
+          <div className="visual-label bottom-right">
+            INPUT → FILTER → OUTPUT
+          </div>
+        </>
+      )}
     </div>
   );
 }
@@ -566,7 +606,7 @@ function ProjectsPage() {
     "All",
     "Embedded",
     "Systems",
-    "Web",
+    "Software",
     "Electronics",
   ];
   const visible =
@@ -581,8 +621,8 @@ function ProjectsPage() {
           Selected <em>work.</em>
         </h1>
         <p>
-          Engineering projects across physical systems, Linux, and the web. Open
-          a project to see its context, architecture, and technical decisions.
+          Engineering projects across physical systems, software, audio, and
+          automation. Open a project to see its context and architecture.
         </p>
       </div>
       <div
@@ -810,7 +850,7 @@ function AboutPage() {
         <div>
           <p>
             My work spans embedded control, Linux and networking, full-stack
-            applications, and web platforms. The common thread is systems
+            applications, and desktop software. The common thread is systems
             thinking: understanding each component, then making the pieces work
             together.
           </p>
@@ -880,10 +920,11 @@ function ExperiencePage() {
               <span className="timeline-dot" />
             </div>
             <h3>Engineering projects</h3>
-            <p className="company">Embedded / Systems / Web</p>
+            <p className="company">Embedded / Systems / Software</p>
             <p>
               Work across ESP32 control, FreeRTOS simulation, PYNQ-Z2 network
-              storage, full-stack applications, and catalog automation.
+              storage, full-stack applications, audio processing, and catalog
+              automation.
             </p>
             <a className="text-link" href={siteUrl("/projects")}>
               Explore projects <Arrow diagonal />
