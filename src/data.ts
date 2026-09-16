@@ -26,9 +26,9 @@ export type Project = {
 export const profile = {
   name: "Mohammad Youssef",
   title: "Computer & Communications Engineer",
-  email: "",
+  email: "mohyoussef029@gmail.com",
   github: "https://github.com/DarkHumor71",
-  linkedin: "",
+  linkedin: "https://www.linkedin.com/in/mohammad-youssef-705953287/",
   resume: "/CV.pdf",
 };
 

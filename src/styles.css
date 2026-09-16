@@ -1350,27 +1350,6 @@ button:hover .arrow {
   gap: 12px;
   margin-top: 28px;
 }
-.resume-sheet {
-  background: #fff;
-  padding: 58px 65px;
-  max-width: 1000px;
-  margin: 60px auto 0;
-  box-shadow: 0 15px 45px #2330250b;
-}
-.resume-sheet-top {
-  display: flex;
-  justify-content: space-between;
-  gap: 40px;
-  padding-bottom: 40px;
-  border-bottom: 2px solid #28352c;
-}
-.resume-sheet-top h2 {
-  font-family: "Space Grotesk", sans-serif;
-  font-size: 62px;
-  line-height: 0.95;
-  letter-spacing: -0.07em;
-  margin: 15px 0 0;
-}
 .resume-contact {
   display: flex;
   flex-direction: column;
@@ -1792,13 +1771,6 @@ button:hover .arrow {
   .experience-timeline {
     margin-left: 8px;
   }
-  .resume-sheet {
-    padding: 32px 25px;
-    margin-top: 40px;
-  }
-  .resume-sheet-top h2 {
-    font-size: 45px;
-  }
   .resume-section {
     grid-template-columns: 1fr;
     gap: 15px;
@@ -1866,9 +1838,6 @@ button:hover .arrow {
   .detail-info-row > div:last-child {
     grid-column: auto;
   }
-  .resume-sheet-top {
-    display: block;
-  }
   .resume-contact {
     align-items: flex-start;
     margin-top: 25px;
@@ -1890,12 +1859,6 @@ button:hover .arrow {
   .page-main {
     padding: 0 !important;
     min-height: auto;
-  }
-  .resume-sheet {
-    box-shadow: none;
-    margin: 0;
-    padding: 0;
-    max-width: none;
   }
   .container {
     width: 100%;

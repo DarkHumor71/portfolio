@@ -161,7 +161,7 @@ function ProjectVisual({
                     <b>{stage}</b>
                     <i />
                   </div>
-                )
+                ),
               )}
             </div>
             <div className="rtos-loop">↶ &nbsp; FAILED QC / REWORK LOOP</div>
@@ -913,18 +913,11 @@ function ResumePage() {
   return (
     <main className="page-main container resume-page">
       <div className="page-intro">
-        <span className="eyebrow">RÉSUMÉ / QUICK VIEW</span>
+        <span className="eyebrow">RÉSUMÉ</span>
         <h1>
           At a <em>glance.</em>
         </h1>
-        <p>
-          A concise view of my experience and technical range. Download my CV
-          or use your browser’s print option to save this page.
-        </p>
         <div className="resume-actions">
-          <button className="button button-dark" onClick={() => window.print()}>
-            Print / save as PDF <Arrow diagonal />
-          </button>
           {profile.resume && (
             <a
               className="button button-outline"
@@ -934,65 +927,6 @@ function ResumePage() {
               Download CV <Arrow diagonal />
             </a>
           )}
-        </div>
-      </div>
-      <div className="resume-sheet">
-        <div className="resume-sheet-top">
-          <div>
-            <span className="eyebrow">COMPUTER & COMMUNICATIONS ENGINEER</span>
-            <h2>
-              Mohammad
-              <br />
-              Youssef.
-            </h2>
-          </div>
-          <div className="resume-contact">
-            {profile.email && (
-              <a href={`mailto:${profile.email}`}>{profile.email}</a>
-            )}
-            {profile.github && <a href={profile.github}>GitHub ↗</a>}
-            {profile.linkedin && <a href={profile.linkedin}>LinkedIn ↗</a>}
-          </div>
-        </div>
-        <div className="resume-section">
-          <h3>Profile</h3>
-          <p>
-            Engineer working across embedded systems, electronics, software, and
-            networks. Interested in building connected systems from physical
-            prototype through application interface.
-          </p>
-        </div>
-        <div className="resume-section">
-          <h3>Experience</h3>
-          <div className="resume-entry">
-            <span>2025 — 2026</span>
-            <div>
-              <strong>Software Engineer · ITXI</strong>
-            </div>
-          </div>
-        </div>
-        <div className="resume-section">
-          <h3>Selected projects</h3>
-          {projects.slice(0, 5).map((p) => (
-            <div className="resume-entry" key={p.slug}>
-              <span>{p.category.toUpperCase()}</span>
-              <div>
-                <strong>{p.title}</strong>
-                <p>{p.summary}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-        <div className="resume-section">
-          <h3>Technical skills</h3>
-          <div className="resume-skill-list">
-            {skills.map((s) => (
-              <div key={s.name}>
-                <strong>{s.name}</strong>
-                <span>{s.items.join(" · ")}</span>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </main>
