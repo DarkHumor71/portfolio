@@ -29,7 +29,7 @@ export const profile = {
   email: "",
   github: "https://github.com/DarkHumor71",
   linkedin: "",
-  resume: "",
+  resume: "/CV.pdf",
 };
 
 export const projects: Project[] = [

@@ -918,8 +918,8 @@ function ResumePage() {
           At a <em>glance.</em>
         </h1>
         <p>
-          A concise view of my experience and technical range. Use your
-          browser’s print option to save a copy.
+          A concise view of my experience and technical range. Download my CV
+          or use your browser’s print option to save this page.
         </p>
         <div className="resume-actions">
           <button className="button button-dark" onClick={() => window.print()}>
@@ -931,7 +931,7 @@ function ResumePage() {
               href={assetUrl(profile.resume)}
               download
             >
-              Download résumé <Arrow diagonal />
+              Download CV <Arrow diagonal />
             </a>
           )}
         </div>
