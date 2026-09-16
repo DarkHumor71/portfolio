@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "tsc --noEmit && vite build && node scripts/copy-404.cjs",
+    "build": "tsc --noEmit && vite build && node scripts/generate-pages.cjs",
     "preview": "vite preview"
   },
   "dependencies": {

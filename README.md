@@ -9,7 +9,7 @@ npm install
 npm run dev
 ```
 
-The production build is created with `npm run build` in `dist/`. The build also copies `index.html` to `404.html` so direct project URLs render on GitHub Pages.
+The production build is created with `npm run build` in `dist/`. It generates an `index.html` for each route so direct project URLs work on GitHub Pages, plus a `404.html` fallback.
 
 ## Publish with GitHub Pages
 
@@ -19,7 +19,7 @@ The production build is created with `npm run build` in `dist/`. The build also 
 
 For a normal project URL such as `username.github.io/portfolio/`, the workflow sets the Vite base path from the repository name automatically. For a custom domain or a `username.github.io` repository, create a repository variable named `SITE_BASE_PATH` with the value `/`. Configure the custom domain in GitHub Pages settings; add a `public/CNAME` file containing the domain if you want it kept in source control.
 
-GitHub Pages serves its `404.html` for direct visits to a case-study URL. The page renders correctly, though GitHub Pages returns a 404 HTTP status for that request. Navigation from within the site uses the normal project URLs.
+Project slugs are read from `src/data.ts` during the build, so new project pages are published automatically.
 
 ## Add your details
 
