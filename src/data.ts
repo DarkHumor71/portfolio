@@ -14,7 +14,7 @@ export type Project = {
   architecture: string[];
   notes: { title: string; body: string }[];
   outcome: string;
-  visual: "elevator" | "freertos" | "nas" | "elesystem" | "automation" | "mic";
+  visual: "freertos" | "nas" | "elesystem" | "automation" | "mic";
   featured: boolean;
   image?: string;
   imageAlt?: string;
@@ -34,55 +34,8 @@ export const profile = {
 
 export const projects: Project[] = [
   {
-    slug: "esp32-elevator",
-    number: "01",
-    title: "ESP32 Elevator Control System",
-    shortTitle: "ESP32 Elevator",
-    category: "Embedded",
-    eyebrow: "EMBEDDED SYSTEMS / CONTROL",
-    summary:
-      "A physical four-floor elevator prototype combining motor control, floor sensing, current monitoring, and server communication.",
-    overview:
-      "A physical elevator prototype built around an ESP32. The controller brings together floor detection, motor direction, current sensing, a seven-segment display, and communication with a server.",
-    role: "Electronics, firmware, control logic, server communication, and mechanical integration.",
-    technologies: [
-      "ESP32",
-      "Embedded C/C++",
-      "IR sensors",
-      "ACS712",
-      "74HC595",
-      "24V motor",
-      "HTTP API",
-    ],
-    architecture: [
-      "Web server",
-      "ESP32 controller",
-      "Sensors + motor driver + display",
-      "Elevator cabin",
-    ],
-    notes: [
-      {
-        title: "Feedback before motion",
-        body: "Floor sensors provide the position input required by the controller. The interface between sensed position and commanded movement is central to the prototype.",
-      },
-      {
-        title: "One controller, several interfaces",
-        body: "The ESP32 coordinates motor direction, current readings, display output, and HTTP communication across the system.",
-      },
-      {
-        title: "Physical integration",
-        body: "The project connects firmware decisions to a real moving mechanism, where wiring, sensing, and mechanical behavior all matter.",
-      },
-    ],
-    outcome:
-      "A working four-floor prototype that brings sensing, motor control, display output, and server communication into one physical system.",
-    visual: "elevator",
-    featured: true,
-    github: "https://github.com/DarkHumor71/EleSystemv2/tree/master/board",
-  },
-  {
     slug: "freertos-manufacturer",
-    number: "02",
+    number: "01",
     title: "FreeRTOS Manufacturing Process",
     shortTitle: "FreeRTOS Manufacturer",
     category: "Embedded",
@@ -129,7 +82,7 @@ export const projects: Project[] = [
   },
   {
     slug: "pynq-nas",
-    number: "03",
+    number: "02",
     title: "PYNQ-Z2 Network Storage",
     shortTitle: "PYNQ-Z2 NAS",
     category: "Systems",
@@ -170,7 +123,7 @@ export const projects: Project[] = [
   },
   {
     slug: "elesystem",
-    number: "04",
+    number: "03",
     title: "EleSystemv2",
     shortTitle: "EleSystemv2",
     category: "Software",
@@ -218,7 +171,7 @@ export const projects: Project[] = [
   },
   {
     slug: "gmc-automation",
-    number: "05",
+    number: "04",
     title: "GMC Catalog Automation",
     shortTitle: "GMC Automation",
     category: "Systems",
@@ -264,7 +217,7 @@ export const projects: Project[] = [
   },
   {
     slug: "mic-cleaner",
-    number: "06",
+    number: "05",
     title: "MicCleaner",
     shortTitle: "MicCleaner",
     category: "Software",

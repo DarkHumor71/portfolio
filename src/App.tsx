@@ -121,36 +121,9 @@ function ProjectVisual({
       aria-label={`${kind} project diagram illustration`}
     >
       <div className="visual-grid" />
-      {kind === "elevator" && (
-        <>
-          <div className="visual-label top-left">FIG 01 / CONTROL SYSTEM</div>
-          <div className="elevator-frame">
-            {[4, 3, 2, 1].map((n) => (
-              <div className="floor" key={n}>
-                <span>0{n}</span>
-                <i className={n === 2 ? "lit" : ""} />
-              </div>
-            ))}
-            <div className="elevator-car">
-              <span>↕</span>
-            </div>
-          </div>
-          <div className="elevator-controller">
-            <span>ESP32</span>
-            <i />
-            <i />
-            <i />
-          </div>
-          <span className="visual-wire wire-one" />
-          <span className="visual-wire wire-two" />
-          <div className="visual-label bottom-right">
-            SENSOR → LOGIC → MOTION
-          </div>
-        </>
-      )}
       {kind === "nas" && (
         <>
-          <div className="visual-label top-left">FIG 03 / NETWORK STORAGE</div>
+          <div className="visual-label top-left">FIG 02 / NETWORK STORAGE</div>
           <div className="nas-orbit orbit-one" />
           <div className="nas-orbit orbit-two" />
           <div className="nas-board">
@@ -174,7 +147,7 @@ function ProjectVisual({
       )}
       {kind === "freertos" && (
         <>
-          <div className="visual-label top-left">FIG 02 / PROCESS CONTROL</div>
+          <div className="visual-label top-left">FIG 01 / PROCESS CONTROL</div>
           <div className="rtos-diagram">
             <div className="rtos-heading">
               <span>● LIVE SIMULATION</span>
@@ -201,7 +174,7 @@ function ProjectVisual({
       {kind === "elesystem" && (
         <>
           <div className="visual-label top-left">
-            FIG 04 / CONNECTED PLATFORM
+            FIG 03 / CONNECTED PLATFORM
           </div>
           <div className="dashboard">
             <div className="dashboard-top">
@@ -242,7 +215,7 @@ function ProjectVisual({
       )}
       {kind === "automation" && (
         <>
-          <div className="visual-label top-left">FIG 05 / CATALOG PIPELINE</div>
+          <div className="visual-label top-left">FIG 04 / CATALOG PIPELINE</div>
           <div className="automation-flow">
             <div className="automation-node">
               <small>01 / SOURCE</small>
@@ -286,7 +259,7 @@ function ProjectVisual({
       {kind === "mic" && (
         <>
           <div className="visual-label top-left">
-            FIG 06 / AUDIO SIGNAL PATH
+            FIG 05 / AUDIO SIGNAL PATH
           </div>
           <div className="mic-console">
             <div className="mic-console-head">

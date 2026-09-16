@@ -515,107 +515,6 @@ button:hover .arrow {
   bottom: 22px;
   right: 23px;
 }
-.visual-elevator {
-  background: #dbe4d8;
-}
-.visual-elevator .visual-grid {
-  background-image: linear-gradient(#315a3a12 1px, transparent 1px),
-    linear-gradient(90deg, #315a3a12 1px, transparent 1px);
-}
-.visual-elevator .visual-label {
-  color: #436247;
-}
-.elevator-frame {
-  position: absolute;
-  width: 170px;
-  height: 250px;
-  left: 39%;
-  top: 19%;
-  border: 7px solid #395b49;
-  background: #e9f0df;
-  box-shadow: 16px 18px 0 #395b4927;
-}
-.floor {
-  height: 25%;
-  border-bottom: 2px solid #91aa8f;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 12px;
-  color: #547456;
-  font-family: "DM Mono", monospace;
-  font-size: 11px;
-}
-.floor:last-of-type {
-  border: 0;
-}
-.floor i {
-  width: 8px;
-  height: 8px;
-  border: 1px solid #84a185;
-  border-radius: 50%;
-}
-.floor i.lit {
-  background: #f0673d;
-  border-color: #f0673d;
-}
-.elevator-car {
-  position: absolute;
-  left: 52px;
-  bottom: 62px;
-  width: 57px;
-  height: 57px;
-  background: #f0673d;
-  border: 4px solid #395b49;
-  display: grid;
-  place-items: center;
-  font-family: "Space Grotesk", sans-serif;
-  font-size: 31px;
-  color: #fff;
-}
-.elevator-controller {
-  position: absolute;
-  left: 13%;
-  top: 38%;
-  width: 105px;
-  height: 74px;
-  background: #385c49;
-  border: 5px solid #274834;
-  color: #d8f16b;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: "DM Mono", monospace;
-  font-size: 13px;
-  letter-spacing: 0.1em;
-  box-shadow: 9px 9px 0 #385c4930;
-}
-.elevator-controller i {
-  position: absolute;
-  width: 4px;
-  height: 10px;
-  background: #9bad90;
-  top: -13px;
-  left: 24px;
-}
-.elevator-controller i:nth-of-type(2) {
-  left: 49px;
-}
-.elevator-controller i:nth-of-type(3) {
-  left: 74px;
-}
-.visual-wire {
-  position: absolute;
-  height: 2px;
-  background: #f0673d;
-  left: calc(13% + 105px);
-  width: calc(26% - 105px);
-  top: 48%;
-}
-.wire-two {
-  top: 55%;
-  background: #648569;
-}
 .visual-nas {
   background: #1d323b;
 }
@@ -1122,16 +1021,6 @@ button:hover .arrow {
 }
 .visual-large {
   height: 550px;
-}
-.visual-large .elevator-frame {
-  transform: scale(1.45);
-  transform-origin: center;
-  left: 45%;
-  top: 27%;
-}
-.visual-large .elevator-controller {
-  transform: scale(1.4);
-  left: 21%;
 }
 .visual-large .nas-board {
   transform: translate(-50%, -50%) rotate(-5deg) scale(1.5);
@@ -1819,15 +1708,6 @@ button:hover .arrow {
   .visual-large {
     height: 360px;
   }
-  .visual-large .elevator-frame {
-    transform: scale(1);
-    left: 42%;
-    top: 20%;
-  }
-  .visual-large .elevator-controller {
-    transform: scale(1);
-    left: 8%;
-  }
   .visual-large .nas-board {
     transform: translate(-50%, -50%) rotate(-5deg);
   }
@@ -1960,16 +1840,6 @@ button:hover .arrow {
   .project-visual {
     height: 260px;
   }
-  .elevator-frame {
-    transform: scale(0.82);
-    transform-origin: top left;
-    left: 37%;
-    top: 19%;
-  }
-  .elevator-controller {
-    transform: scale(0.82);
-    left: 7%;
-  }
   .dashboard {
     left: 7%;
     right: 7%;
@@ -1977,15 +1847,6 @@ button:hover .arrow {
   }
   .visual-large {
     height: 310px;
-  }
-  .visual-large .elevator-frame {
-    transform: scale(0.85);
-    left: 39%;
-    top: 16%;
-  }
-  .visual-large .elevator-controller {
-    transform: scale(0.8);
-    left: 5%;
   }
   .visual-large .dashboard {
     height: 190px;
