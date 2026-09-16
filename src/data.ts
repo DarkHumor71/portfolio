@@ -14,13 +14,7 @@ export type Project = {
   architecture: string[];
   notes: { title: string; body: string }[];
   outcome: string;
-  visual:
-    | "elevator"
-    | "freertos"
-    | "nas"
-    | "elesystem"
-    | "automation"
-    | "hachette";
+  visual: "elevator" | "freertos" | "nas" | "elesystem" | "automation";
   featured: boolean;
   image?: string;
   imageAlt?: string;
@@ -267,39 +261,6 @@ export const projects: Project[] = [
     visual: "automation",
     featured: true,
     github: "https://github.com/DarkHumor71/GMC-automation",
-  },
-  {
-    slug: "hachette-antoine",
-    number: "06",
-    title: "Hachette Antoine Platform",
-    shortTitle: "Hachette Antoine",
-    category: "Web",
-    eyebrow: "WEB PLATFORM / WORDPRESS",
-    summary:
-      "A WordPress platform project showing experience with a production content-management ecosystem.",
-    overview:
-      "A WordPress platform for Hachette Antoine, included as an example of practical web delivery and content-driven development.",
-    role: "WordPress platform development.",
-    technologies: ["WordPress", "PHP", "Web development"],
-    architecture: [
-      "Content editors",
-      "WordPress",
-      "Theme + application layer",
-      "Published website",
-    ],
-    notes: [
-      {
-        title: "Content as a system",
-        body: "A publishing platform needs to serve both the people managing content and the visitors using it.",
-      },
-      {
-        title: "Production context",
-        body: "This project adds client-facing web experience to a portfolio otherwise focused on hardware and systems.",
-      },
-    ],
-    outcome: "A content-driven WordPress platform for Hachette Antoine.",
-    visual: "hachette",
-    featured: true,
   },
 ];
 

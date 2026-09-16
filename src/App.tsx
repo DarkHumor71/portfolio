@@ -283,37 +283,6 @@ function ProjectVisual({
           </div>
         </>
       )}
-      {kind === "hachette" && (
-        <>
-          <div className="visual-label top-left">
-            FIG 06 / PUBLISHING PLATFORM
-          </div>
-          <div className="publication">
-            <div className="publication-head">
-              HACHETTE
-              <br />
-              <span>ANTOINE</span>
-            </div>
-            <div className="publication-line" />
-            <div className="publication-layout">
-              <div className="publication-cover">
-                <span>H</span>
-              </div>
-              <div className="publication-copy">
-                <i />
-                <i />
-                <i />
-                <b>
-                  EXPLORE
-                  <br />
-                  THE STORIES
-                </b>
-              </div>
-            </div>
-          </div>
-          <div className="visual-label bottom-right">CONTENT / EXPERIENCE</div>
-        </>
-      )}
     </div>
   );
 }
